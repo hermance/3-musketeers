@@ -155,5 +155,57 @@ describe('is.falsy', function(){
         expect(is.falsy(true)).to.be.false;
     });
 });
+
+
+
+describe('is.space', function(){
+	it('should return true if is a space', function () {
+	//var arguments = "";
+	expect(is.space(" ")).to.be.true;
+	expect(is.space("	")).to.be.true;
+	expect(is.space("\n")).to.be.true;
+    });
+    it("should return false if is not space ", function () {
+        
+	expect(is.space("hello")).to.be.false;
+	expect(is.space('hello')).to.be.false;
+	expect(is.space([1,2])).to.be.false;
+        expect(is.space(true)).to.be.false;
+    });
+});
+
+
+describe('is.equal', function(){
+	it('should return true if the two args are equals', function () {
+	//var arguments = "";
+	expect(is.equal("hello","hello")).to.be.true;
+	//expect(is.equal([1],[1])).to.be.true;
+	expect(is.equal(1,1)).to.be.true;
+	expect(is.equal(true,true)).to.be.true;
+	expect(is.equal('\\w+','\\w+')).to.be.true;
+    });
+    it("should return false if they are differents ", function () {
+        
+	expect(is.equal("hello","bye")).to.be.false;
+	expect(is.equal(true,false)).to.be.false;
+	expect(is.equal([1],[2])).to.be.false;
+        expect(is.equal(1,2)).to.be.false;
+        expect(is.equal('\\y+','\\w+')).to.be.false;
+    });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 });
 
