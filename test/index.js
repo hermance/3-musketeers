@@ -122,5 +122,38 @@ describe('is.existy', function(){
     });
 });
 
+
+describe('is.truthy', function(){
+	it('should return true if truthy', function () {
+	//var arguments = "";
+	expect(is.truthy("hello")).to.be.true;
+	expect(is.truthy('hello')).to.be.true;
+	expect(is.truthy([1,2])).to.be.true;
+        expect(is.truthy(true)).to.be.true;
+    });
+    it("should return false if does not truthy (falsy)", function () {
+        expect(is.truthy(null)).to.be.false;
+	expect(is.truthy(0)).to.be.false;
+	expect(is.truthy(false)).to.be.false;
+    });
+});
+
+
+
+describe('is.falsy', function(){
+	it('should return true if falsy', function () {
+	//var arguments = "";
+	expect(is.falsy(null)).to.be.true;
+	expect(is.falsy(0)).to.be.true;
+	expect(is.falsy(false)).to.be.true;
+    });
+    it("should return false if does not falsy (truthy)", function () {
+        
+	expect(is.falsy("hello")).to.be.false;
+	expect(is.falsy('hello')).to.be.false;
+	expect(is.falsy([1,2])).to.be.false;
+        expect(is.falsy(true)).to.be.false;
+    });
+});
 });
 
