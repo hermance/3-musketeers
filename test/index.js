@@ -391,6 +391,54 @@ describe('is.under', function(){
     });
 });
 
+describe('is.within', function(){
+	it('should return true if the number is within the max and min given', function () {
+	//var arguments = "";
+	expect(is.within(1,0,3)).to.be.true;
+    });
+    it("should return false if they are not within the max and min given", function () {
+        
+	expect(is.within(5,0,3)).to.be.false;
+    });
+});
+describe('is.decimal', function(){
+	it('should return true if the number is decimal', function () {
+	//var arguments = "";
+	expect(is.decimal(1.3)).to.be.true;
+    });
+    it("should return false if they are not decimal", function () {
+        
+	expect(is.decimal(5)).to.be.false;
+    });
+});
+
+describe('is.integer', function(){
+	it('should return true if the number is integer', function () {
+	//var arguments = "";
+	expect(is.integer(3)).to.be.true;
+    });
+    it("should return false if they are not integer", function () {
+        
+	expect(is.integer(5.2)).to.be.false;
+    });
+});
+
+describe('is.finite', function(){
+	it('should return true if the number is finite', function () {
+	//var arguments = "";
+	expect(is.finite(3)).to.be.true;
+    });
+    it("should return false if they are not finite", function () {
+        
+	expect(is.finite(Infinity)).to.be.false;
+	expect(is.finite(-Infinity)).to.be.false;
+	expect(is.finite(NaN)).to.be.false;
+    });
+});
+
+
+
+
 
 
 
