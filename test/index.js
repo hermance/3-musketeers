@@ -195,6 +195,35 @@ describe('is.equal', function(){
 });
 
 
+describe('is.even', function(){
+	it('should return true if the number is even', function () {
+	//var arguments = "";
+	expect(is.even(2)).to.be.true;
+    });
+    it("should return false if they are not even ", function () {
+        
+	expect(is.even(1)).to.be.false;
+    });
+});
+
+describe('is.odd', function(){
+	it('should return true if the number is odd', function () {
+	//var arguments = "";
+	expect(is.odd(1)).to.be.true;
+    });
+    it("should return false if they are not odd ", function () {
+        
+	expect(is.odd(2)).to.be.false;
+    });
+});
+
+
+
+
+
+
+
+
 
 
 
