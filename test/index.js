@@ -449,7 +449,223 @@ describe('is.infinite', function(){
     });
 });
 
+//string check
+ describe('is.include', function () {
 
+    it('should return true if passed parameter is included in other param', function () {
+    expect(is.include("hello","ell")).to.be.true;
+    });
+    it("should return false if passed parameter is not ", function () {
+    expect(is.include("hello","test")).to.be.false;
+    });
+  });
+
+describe('is.upperCase', function () {
+
+    it('should return true if passed parameter is in caps', function () {
+    expect(is.upperCase("PSG")).to.be.true;
+    });
+    it("should return false if passed parameter is not ", function () {
+    expect(is.upperCase("hello")).to.be.false;
+    });
+  });
+
+describe('is.lowerCase', function () {
+
+    it('should return true if passed parameter is in lower', function () {
+    expect(is.lowerCase("hello")).to.be.true;
+    });
+    it("should return false if passed parameter is not ", function () {
+    expect(is.lowerCase("Test")).to.be.false;
+    expect(is.lowerCase("TEST")).to.be.false
+    });
+  });
+
+
+ describe('is.startWith', function () {
+
+    it('should return true if passed parameter starts the other param', function () {
+    expect(is.startWith("hello","hel")).to.be.true;
+    });
+    it("should return false if passed parameter don't ", function () {
+    expect(is.startWith("hello","ell")).to.be.false;
+    });
+  });
+
+ describe('is.endWith', function () {
+
+    it('should return true if passed parameter ends the other param', function () {
+    expect(is.endWith("hello","llo")).to.be.true;
+    });
+    it("should return false if passed parameter don't ", function () {
+    expect(is.endWith("hello","hell")).to.be.false;
+    });
+  });
+
+ describe('is.palindrome', function () {
+
+    it('should return true if passed parameter is a palindrome', function () {
+    expect(is.palindrome("laval")).to.be.true;
+    });
+    it("should return false if passed parameter isn't ", function () {
+    expect(is.palindrome("test")).to.be.false;
+    });
+  });
+
+ describe('is.capitalized', function () {
+
+    it('should return true if passed parameter is a capitalized', function () {
+    expect(is.capitalized("Hello")).to.be.true;
+    expect(is.capitalized("Hello World")).to.be.true;
+    });
+    it("should return false if passed parameter isn't ", function () {
+    expect(is.capitalized("test")).to.be.false;
+    });
+  });//string check
+ describe('is.include', function () {
+
+    it('should return true if passed parameter is included in other param', function () {
+    expect(is.include("hello","ell")).to.be.true;
+    });
+    it("should return false if passed parameter is not ", function () {
+    expect(is.include("hello","test")).to.be.false;
+    });
+  });
+
+describe('is.upperCase', function () {
+
+    it('should return true if passed parameter is in caps', function () {
+    expect(is.upperCase("PSG")).to.be.true;
+    });
+    it("should return false if passed parameter is not ", function () {
+    expect(is.upperCase("hello")).to.be.false;
+    });
+  });
+
+describe('is.lowerCase', function () {
+
+    it('should return true if passed parameter is in lower', function () {
+    expect(is.lowerCase("hello")).to.be.true;
+    });
+    it("should return false if passed parameter is not ", function () {
+    expect(is.lowerCase("Test")).to.be.false;
+    expect(is.lowerCase("TEST")).to.be.false
+    });
+  });
+
+
+ describe('is.startWith', function () {
+
+    it('should return true if passed parameter starts the other param', function () {
+    expect(is.startWith("hello","hel")).to.be.true;
+    });
+    it("should return false if passed parameter don't ", function () {
+    expect(is.startWith("hello","ell")).to.be.false;
+    });
+  });
+
+ describe('is.endWith', function () {
+
+    it('should return true if passed parameter ends the other param', function () {
+    expect(is.endWith("hello","llo")).to.be.true;
+    });
+    it("should return false if passed parameter don't ", function () {
+    expect(is.endWith("hello","hell")).to.be.false;
+    });
+  });
+
+ describe('is.palindrome', function () {
+
+    it('should return true if passed parameter is a palindrome', function () {
+    expect(is.palindrome("laval")).to.be.true;
+    });
+    it("should return false if passed parameter isn't ", function () {
+    expect(is.palindrome("test")).to.be.false;
+    });
+  });
+
+ describe('is.capitalized', function () {
+
+    it('should return true if passed parameter is a capitalized', function () {
+    expect(is.capitalized("Hello")).to.be.true;
+    expect(is.capitalized("Hello World")).to.be.true;
+    });
+    it("should return false if passed parameter isn't ", function () {
+    expect(is.capitalized("test")).to.be.false;
+    });
+  });//string check
+ describe('is.include', function () {
+
+    it('should return true if passed parameter is included in other param', function () {
+    expect(is.include("hello","ell")).to.be.true;
+    });
+    it("should return false if passed parameter is not ", function () {
+    expect(is.include("hello","test")).to.be.false;
+    });
+  });
+
+describe('is.upperCase', function () {
+
+    it('should return true if passed parameter is in caps', function () {
+    expect(is.upperCase("PSG")).to.be.true;
+    });
+    it("should return false if passed parameter is not ", function () {
+    expect(is.upperCase("hello")).to.be.false;
+    });
+  });
+
+describe('is.lowerCase', function () {
+
+    it('should return true if passed parameter is in lower', function () {
+    expect(is.lowerCase("hello")).to.be.true;
+    });
+    it("should return false if passed parameter is not ", function () {
+    expect(is.lowerCase("Test")).to.be.false;
+    expect(is.lowerCase("TEST")).to.be.false
+    });
+  });
+
+
+ describe('is.startWith', function () {
+
+    it('should return true if passed parameter starts the other param', function () {
+    expect(is.startWith("hello","hel")).to.be.true;
+    });
+    it("should return false if passed parameter don't ", function () {
+    expect(is.startWith("hello","ell")).to.be.false;
+    });
+  });
+
+ describe('is.endWith', function () {
+
+    it('should return true if passed parameter ends the other param', function () {
+    expect(is.endWith("hello","llo")).to.be.true;
+    });
+    it("should return false if passed parameter don't ", function () {
+    expect(is.endWith("hello","hell")).to.be.false;
+    });
+  });
+
+ describe('is.palindrome', function () {
+
+    it('should return true if passed parameter is a palindrome', function () {
+    expect(is.palindrome("laval")).to.be.true;
+    });
+    it("should return false if passed parameter isn't ", function () {
+    expect(is.palindrome("test")).to.be.false;
+    });
+  });
+
+ describe('is.capitalized', function () {
+
+    it('should return true if passed parameter is a capitalized', function () {
+    expect(is.capitalized("Hello")).to.be.true;
+    expect(is.capitalized("Hello World")).to.be.true;
+    });
+    it("should return false if passed parameter isn't ", function () {
+    expect(is.capitalized("test")).to.be.false;
+    });
+  });
 
 
 
