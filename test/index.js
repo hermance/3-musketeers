@@ -666,8 +666,46 @@ describe('is.lowerCase', function () {
     expect(is.capitalized("test")).to.be.false;
     });
   });
+//array check
 
+ describe('is.sorted', function () {
 
+    it('should return true if passed parameter is a sorted array', function () {
+    expect(is.sorted([1,2,3])).to.be.true;
+    });
+    it("should return false if passed parameter isn't ", function () {
+    expect(is.sorted("test")).to.be.false;
+    expect(is.sorted([1,42,3])).to.be.false;
+    });
+  });
+
+ describe('is.inArray', function () {
+
+    it('should return true if passed parameter is a param array', function () {
+    expect(is.inArray(3,[1,2,3])).to.be.true;
+    });
+    it("should return false if passed parameter isn't ", function () {
+    expect(is.inArray("test")).to.be.false;
+    expect(is.inArray(2,[1,42,3])).to.be.false;
+    });
+  });
+
+//DATE CHECKS
+/*describe('is.today', function () {
+
+    it('should return true if passed parameter is today', function () {
+	
+    var now = new Date();
+    //var todayString = now.toDateString();
+    expect(is.today(now)).to.be.true;
+    });
+    it("should return false if passed parameter isn't ", function () {
+    expect(is.today("01/01/2001")).to.be.false;
+    expect(is.today(null)).to.be.false;
+    expect(is.today("")).to.be.false;
+    expect(is.today(false)).to.be.false;
+    });
+  });*/
 
 
 
