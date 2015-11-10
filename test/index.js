@@ -691,7 +691,7 @@ describe('is.lowerCase', function () {
   });
 
 //DATE CHECKS
-/*describe('is.today', function () {
+describe('is.today', function () {
 
     it('should return true if passed parameter is today', function () {
 	
@@ -705,7 +705,26 @@ describe('is.lowerCase', function () {
     expect(is.today("")).to.be.false;
     expect(is.today(false)).to.be.false;
     });
-  });*/
+  });
+
+describe('is.yesterday', function () {
+
+    it('should return true if passed parameter is yesterday', function () {
+	
+    var now = new Date();
+    //var todayString = now.toDateString();
+var yesterdayString = new Date(now.setDate(now.getDate() - 1));
+   
+    expect(is.yesterday(yesterdayString)).to.be.true;
+    });
+    it("should return false if passed parameter isn't ", function () {
+    expect(is.yesterday("01/01/2001")).to.be.false;
+    expect(is.yesterday(null)).to.be.false;
+    expect(is.yesterday("")).to.be.false;
+    expect(is.yesterday(false)).to.be.false;
+    expect(is.yesterday(new Date())).to.be.false;
+    });
+  });
 
 
 
