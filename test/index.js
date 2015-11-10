@@ -105,5 +105,22 @@ describe('is.empty', function(){
 
 
 
+
+describe('is.existy', function(){
+	it('should return true if exists', function () {
+	//var arguments = "";
+	expect(is.existy("")).to.be.true;
+	expect(is.existy('')).to.be.true;
+	expect(is.existy([])).to.be.true;
+	expect(is.existy({})).to.be.true;
+        expect(is.existy(true)).to.be.true;
+	expect(is.existy(false)).to.be.true;
+    });
+    it("should return false if does not exist", function () {
+        expect(is.existy(null)).to.be.false;
+	expect(is.existy(undefined)).to.be.false;
+    });
+});
+
 });
 
