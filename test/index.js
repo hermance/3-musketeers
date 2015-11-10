@@ -85,6 +85,137 @@ describe('is micro-checking library', function() {
     });
   });
 
+
+describe('is.nan', function () {
+
+    it('should return true if passed parameter type is Nan', function () {
+	expect(is.nan(NaN)).to.be.true;
+    });
+    it("should return false if passed parameter type is not Nan", function () {
+        expect(is.nan('hello')).to.be.false;
+	expect(is.nan(2)).to.be.false;
+	expect(is.nan([])).to.be.false;
+        expect(is.nan(true)).to.be.false;
+    });
+  });
+
+ describe('is.null', function () {
+
+    it('should return true if passed parameter type is null', function () {
+	expect(is.null(null)).to.be.true;
+    });
+    it("should return false if passed parameter type is not null", function () {
+        expect(is.null('hello')).to.be.false;
+	expect(is.null(2)).to.be.false;
+	expect(is.null([])).to.be.false;
+        expect(is.null(true)).to.be.false;
+    });
+  });
+
+ describe('is.number', function () {
+
+    it('should return true if passed parameter type is number', function () {
+	expect(is.number(42)).to.be.true;
+	expect(is.number(3.14)).to.be.true;
+    });
+    it("should return false if passed parameter type is not number", function () {
+        expect(is.number('hello')).to.be.false;
+	expect(is.number([])).to.be.false;
+        expect(is.number(true)).to.be.false;
+    });
+  });
+
+ describe('is.object', function () {
+
+    it('should return true if passed parameter type is object', function () {
+	expect(is.object({})).to.be.true;
+	var arguments = new Object();
+	expect(is.object(arguments)).to.be.true;
+    });
+    it("should return false if passed parameter type is not object", function () {
+	expect(is.object('test')).to.be.false;
+	expect(is.object(404)).to.be.false;
+    });
+  });
+
+ describe('is.json', function () {
+
+    it('should return true if passed parameter type is JSON object', function () {
+	expect(is.json({})).to.be.true;
+    });
+    it("should return false if passed parameter type is not JSON object", function () {
+	expect(is.json('test')).to.be.false;
+	expect(is.json(404)).to.be.false;
+    });
+  });
+
+ describe('is.regexp', function () {
+
+    it('should return true if passed parameter type is regExp', function () {
+	var reg = new RegExp('\\w+');
+	expect(is.regexp(reg)).to.be.true;
+    });
+    it("should return false if passed parameter type is not regExp", function () {
+	expect(is.regexp('test')).to.be.false;
+	expect(is.regexp(404)).to.be.false;
+    });
+  });
+
+
+ describe('is.sameType', function () {
+
+    it('should return true if passed parameter type are same type', function () {
+	expect(is.sameType(7,11)).to.be.true;
+	expect(is.sameType("test","hello")).to.be.true;
+	expect(is.sameType(true,false)).to.be.true;
+    });
+    it("should return false if passed parameter type are not same type", function () {
+	expect(is.sameType('test',404)).to.be.false;
+	expect(is.sameType(false,'404')).to.be.false;
+    });
+  });
+
+ describe('is.string', function () {
+
+    it('should return true if passed parameter type is string', function () {
+	expect(is.string("PSG")).to.be.true;
+    });
+    it("should return false if passed parameter type is not string", function () {
+	expect(is.string(404)).to.be.false;
+	expect(is.string(true)).to.be.false;
+    });
+  });
+
+ describe('is.char', function () {
+
+    it('should return true if passed parameter type is string', function () {
+	expect(is.char('a')).to.be.true;
+    });
+    it("should return false if passed parameter type is not string", function () {
+	expect(is.char(404)).to.be.false;
+	expect(is.char(true)).to.be.false;
+	expect(is.char("hello")).to.be.false;
+    });
+  });
+
+ describe('is.undefined', function () {
+
+    it('should return true if passed parameter type is string', function () {
+	expect(is.undefined(undefined)).to.be.true;
+    });
+    it("should return false if passed parameter type is not string", function () {
+	expect(is.undefined(404)).to.be.false;
+	expect(is.undefined(true)).to.be.false;
+	expect(is.undefined("hello")).to.be.false;
+    });
+  });
+
+
+
+
+
+
+
 //Presence check
 describe('is.empty', function(){
 	it('should return true if empty', function () {
@@ -194,7 +325,7 @@ describe('is.equal', function(){
     });
 });
 
-
+//ARITMETIC CHECKS
 describe('is.even', function(){
 	it('should return true if the number is even', function () {
 	//var arguments = "";
