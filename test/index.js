@@ -436,7 +436,18 @@ describe('is.finite', function(){
     });
 });
 
-
+describe('is.infinite', function(){
+	it('should return true if the number is infinite', function () {
+	//var arguments = "";
+	expect(is.infinite(Infinity)).to.be.true;
+	expect(is.infinite(-Infinity)).to.be.true;
+	expect(is.infinite(NaN)).to.be.true;
+    });
+    it("should return false if they are not infinite", function () {
+        
+	expect(is.infinite(3)).to.be.false;
+    });
+});
 
 
 
