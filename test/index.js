@@ -88,8 +88,11 @@ describe('is micro-checking library', function() {
 //Presence check
 describe('is.empty', function(){
 	it('should return true if empty', function () {
-	var arguments = "";
-	expect(is.empty(arguments)).to.be.true;
+	//var arguments = "";
+	expect(is.empty("")).to.be.true;
+	expect(is.empty('')).to.be.true;
+	expect(is.empty([])).to.be.true;
+	expect(is.empty({})).to.be.true;
     });
     it("should return false if full", function () {
         expect(is.empty('hello')).to.be.false;
