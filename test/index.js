@@ -348,6 +348,50 @@ describe('is.odd', function(){
     });
 });
 
+describe('is.positive', function(){
+	it('should return true if the number is positive', function () {
+	//var arguments = "";
+	expect(is.positive(1)).to.be.true;
+    });
+    it("should return false if they are not positive (negative) ", function () {
+        
+	expect(is.positive(-2)).to.be.false;
+    });
+});
+describe('is.negative', function(){
+	it('should return true if the number is negative', function () {
+	//var arguments = "";
+	expect(is.negative(-1)).to.be.true;
+    });
+    it("should return false if they are not negative (positive) ", function () {
+        
+	expect(is.negative(2)).to.be.false;
+    });
+});
+describe('is.above', function(){
+	it('should return true if the number is above the min given', function () {
+	//var arguments = "";
+	expect(is.above(1,0)).to.be.true;
+    });
+    it("should return false if they are not above the min given", function () {
+        
+	expect(is.above(2,3)).to.be.false;
+    });
+});
+
+
+describe('is.under', function(){
+	it('should return true if the number is under the max given', function () {
+	//var arguments = "";
+	expect(is.under(1,3)).to.be.true;
+    });
+    it("should return false if they are not under the max given", function () {
+        
+	expect(is.under(5,3)).to.be.false;
+    });
+});
+
+
 
 
 
